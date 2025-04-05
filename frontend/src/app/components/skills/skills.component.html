@@ -3,14 +3,13 @@
   <p class="fs-5 opacity-75"> Mis habilidades tecnicas </p>
 </div>
 
-<div class="d-flex justify-content-center align-items-center p-3" style="height: 50vh;">
-
-  <div class="d-flex row justify-content-around h-100 w-100">
+<div class="d-flex justify-content-center align-items-start p-3" style="height: 50vh;">
+  <div class="row gap-5">
     @for (element of array; track element.id) {
-
-    <div class="d-flex flex-column col-md-6 p-0">
-
-      <div class="text-center w-100">
+      <div
+        class="text-center col-12 col-md-5"
+        [ngClass]="{ 'ms-auto': ((element?.id ?? 0) % 2 === 0) }"
+      >
         <div class=" card-header">
           <button
           [id]=element.id
@@ -25,27 +24,25 @@
             element.titulo }}
           </button>
         </div>
+        <div class="collapse card-body" [id]="'collapse-' + element.id">
+          <ul class="list-group list-group-flush">
+
+            @for(item of element.items; track item.id) {
+            <li class="list-group-item p-0 mx-0 my-2">
+              <div class="d-flex justify-content-between">
+                <p class="p-0 m-0" style="font-size: .90em;"> {{ item.skill }} </p>
+                <p class="opacity-75" style="font-size: .75em;"> {{ item.progress }} % </p>
+              </div>
+              <div class="progress p-0 m-0 fondo-opaco" style="height: 5px" role="progressbar" aria-valuenow=item.progress
+                aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar w-{{item.progress}} fondo"></div>
+              </div>
+            </li>
+            }
+
+          </ul>
+        </div>
       </div>
-
-      <div class="collapse card-body p-0 m-0 w-100" [id]="'collapse-' + element.id">
-        <ul class="list-group list-group-flush">
-
-          @for(item of element.items; track item.id) {
-          <li class="list-group-item p-0 mx-0 my-2">
-            <div class="d-flex justify-content-between">
-              <p class="p-0 m-0" style="font-size: .90em;"> {{ item.skill }} </p>
-              <p class="opacity-75" style="font-size: .75em;"> {{ item.progress }} % </p>
-            </div>
-            <div class="progress p-0 m-0 fondo-opaco" style="height: 5px" role="progressbar" aria-valuenow=item.progress
-              aria-valuemin="0" aria-valuemax="100">
-              <div class="progress-bar w-{{item.progress}} fondo"></div>
-            </div>
-          </li>
-          }
-
-        </ul>
-      </div>
-    </div>
     }
   </div>
 </div>

@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 interface Skills {
@@ -16,7 +17,7 @@ interface Items {
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.css',
   host: {
@@ -78,7 +79,7 @@ export class SkillsComponent {
         },
         {
           id: 2,
-          skill: "Angular",
+          skill: "Angular + Ionic",
           progress: 75,
         },
         {

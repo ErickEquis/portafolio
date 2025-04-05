@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { PotafolioComponent } from './components/potafolio/potafolio.component';
+import { ThanksComponent } from "./components/thanks/thanks.component";
 
 @Component({
   selector: 'app-root',
@@ -14,8 +15,9 @@ import { PotafolioComponent } from './components/potafolio/potafolio.component';
     AboutComponent,
     SkillsComponent,
     ContactComponent,
-    PotafolioComponent
-  ],
+    PotafolioComponent,
+    ThanksComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
