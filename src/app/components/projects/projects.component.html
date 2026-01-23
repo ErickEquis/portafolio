@@ -1,0 +1,15 @@
+<section id="projects" class="section animate-in delay-5">
+    <h2>Proyectos Destacados</h2>
+    <div class="projects-list">
+        <article class="project-card" *ngFor="let project of projects">
+            <div class="project-header">
+                <h3>{{ project.title }}</h3>
+                <a [href]="project.link" target="_blank" class="icon-link" aria-label="Ver proyecto">↗</a>
+            </div>
+            <p>{{ project.description }}</p>
+            <div class="tags small">
+                <span *ngFor="let tag of project.tags">{{ tag }}</span>
+            </div>
+        </article>
+    </div>
+</section>

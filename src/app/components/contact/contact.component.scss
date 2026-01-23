@@ -1,0 +1,37 @@
+.footer {
+    border-top: 1px solid var(--border-color);
+    padding-top: var(--spacing-md);
+    margin-bottom: 0;
+}
+
+.social-links {
+    margin-top: var(--spacing-md);
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.social-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+}
+
+.social-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--text-primary);
+    transition: var(--transition-fast);
+}
+
+.social-links a:hover::after {
+    width: 100%;
+}
+
+.section {
+    margin-bottom: var(--spacing-xl);
+}

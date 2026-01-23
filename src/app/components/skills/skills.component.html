@@ -1,0 +1,11 @@
+<section id="stack" class="section animate-in delay-4">
+    <h2>Tecnologías</h2>
+    <div class="skills-grid">
+        <div class="skill-category" *ngFor="let category of skillCategories">
+            <h3>{{ category.title }}</h3>
+            <div class="tags">
+                <span *ngFor="let skill of category.skills">{{ skill }}</span>
+            </div>
+        </div>
+    </div>
+</section>
