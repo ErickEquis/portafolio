@@ -13,7 +13,7 @@ export class SkillsComponent {
     },
     {
       title: 'Backend',
-      skills: ['NodeJs + Express', 'ORM Sequelize', 'SQL', 'NoSQL', 'Python + Flask', 'Java']
+      skills: ['NodeJs + Express', 'SQL', 'NoSQL', 'Python + Flask', 'Java']
     },
     {
       title: 'Tools',
